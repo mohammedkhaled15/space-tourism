@@ -56,6 +56,7 @@
   opacity: 0;
 }
 
+/*start header styling*/
 header {
   padding-top: 24px;
   padding-right: 20px;
@@ -112,6 +113,8 @@ header .content .menu-btn span {
   background-color: #D0D6F9;
 }
 
+/*end header styling*/
+/*start styling menu*/
 .side-menu {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.04);
@@ -151,21 +154,20 @@ header .content .menu-btn span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 200px;
+  counter-increment: serial 0;
 }
 
 .side-menu ul a {
   text-decoration: none;
   color: #fff;
-  counter-reset: serial;
   position: relative;
 }
 
 .side-menu ul a::before {
   content: "0" counter(serial);
-  counter-increment: serial 0;
   position: absolute;
   left: -30px;
-  font-family: barlow condensed;
+  font-family: barlow Condensed;
   font-weight: 800;
 }
 
@@ -177,6 +179,8 @@ header .content .menu-btn span {
   font-size: 16px;
 }
 
+/*start styling menu*/
+/*start homepage styling*/
 body {
   background-image: url(../../../imgs/home/background-home-mobile.jpg);
   background-size: cover;
@@ -266,4 +270,6 @@ body .landing .explore .circle:hover::after {
   width: 225px;
   height: 225px;
 }
+
+/*end homepage styling*/
 /*# sourceMappingURL=homepage.css.map */

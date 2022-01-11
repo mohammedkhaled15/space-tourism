@@ -1,3 +1,4 @@
+/*start header styling*/
 header{
     padding-top: 24px;
     padding-right: 20px;
@@ -33,6 +34,8 @@ header{
         }
     }
 }
+/*end header styling*/
+/*start styling menu*/
 .side-menu{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.04);
@@ -58,18 +61,16 @@ header{
         flex-direction: column;
         justify-content: space-between;
         height: 200px;
+        counter-increment: serial 0;
         a{
             text-decoration: none;
             color: $main-headers-color;
-            counter-reset: serial;
             position: relative;
             &::before{
-                
                 content:"0"counter(serial);
-                counter-increment: serial 0;
                 position: absolute;
                 left: -30px;
-                font-family: barlow condensed;
+                font-family: barlow Condensed;
                 font-weight: 800;
             }
             li{
@@ -82,3 +83,4 @@ header{
         }
     }
 }
+/*start styling menu*/
