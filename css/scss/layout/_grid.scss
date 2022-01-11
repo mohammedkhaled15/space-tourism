@@ -4,7 +4,7 @@
     padding-left: 15px;
     padding-right: 15px;
     @include breakpoints (mobile){
-        width:350px;
+        width:310px;
     }
     @include breakpoints(small){
         width:540px;

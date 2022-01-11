@@ -23,7 +23,7 @@
 
 @media (max-width: 575px) {
   .container {
-    width: 350px;
+    width: 310px;
   }
 }
 
@@ -51,8 +51,14 @@
   }
 }
 
+.disappear {
+  display: none;
+}
+
 header {
-  margin: 24px 20px auto 20px;
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 header .content {
@@ -105,8 +111,72 @@ header .content .menu-btn span {
   background-color: #D0D6F9;
 }
 
+.side-menu {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(18px);
+  -o-backdrop-filter: blur(18px);
+  -moz-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  height: 100vh;
+  right: 0;
+  top: 0;
+  width: 65%;
+  z-index: 2;
+  color: #fff;
+}
+
+.side-menu img {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.side-menu ul {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 200px;
+}
+
+.side-menu ul a {
+  text-decoration: none;
+  color: #fff;
+  counter-reset: serial;
+  position: relative;
+}
+
+.side-menu ul a::before {
+  counter-increment: serial;
+  content: "0" counter(serial);
+  position: absolute;
+  left: -30px;
+  font-family: barlow condensed;
+  font-weight: 800;
+}
+
+.side-menu ul a li {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  font-family: Barlow Condensed;
+  font-size: 16px;
+}
+
 body {
   background-image: url(../../../imgs/home/background-home-mobile.jpg);
+  background-size: cover;
+  position: relative;
 }
 
 body .landing {
@@ -164,6 +234,7 @@ body .landing .explore .circle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 body .landing .explore .circle h2 {
@@ -173,5 +244,22 @@ body .landing .explore .circle h2 {
   letter-spacing: 1.25px;
   line-height: 22.92px;
   text-transform: uppercase;
+}
+
+body .landing .explore .circle:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #25242f;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .landing .explore .circle:hover::after {
+  width: 225px;
+  height: 225px;
 }
 /*# sourceMappingURL=homepage.css.map */

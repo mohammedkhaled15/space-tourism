@@ -1,5 +1,7 @@
 body{
     background-image: url(../../../imgs/home/background-home-mobile.jpg);
+    background-size: cover;
+    position: relative;
     .landing{
         margin-top: 48px;
         text-align: center;
@@ -47,6 +49,7 @@ body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
                 h2{
                     font:{
                         size: 20px;
@@ -56,6 +59,20 @@ body{
                     letter-spacing: 1.25px;
                     line-height: 22.92px;
                     text-transform: uppercase;
+                }
+                &:after{
+                    content: "";
+                    @include prefixer (border-radius, 50%, webkit o moz);
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $hover-main-btn-color;
+                    @include prefixer (transition, 0.5s, webkit o moz);
+                }
+                &:hover::after{
+                    width: 225px;
+                    height: 225px;
                 }
             }
         }
