@@ -53,6 +53,7 @@
 
 .disappear {
   display: none;
+  opacity: 0;
 }
 
 header {
@@ -82,7 +83,7 @@ header .content .logo {
   height: 40px;
 }
 
-header .content .logo img {
+header .content .logo a img {
   max-width: 100%;
 }
 
@@ -118,6 +119,8 @@ header .content .menu-btn span {
   -o-backdrop-filter: blur(18px);
   -moz-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   height: 100vh;
   right: 0;
   top: 0;
@@ -130,12 +133,13 @@ header .content .menu-btn span {
   position: absolute;
   top: 20px;
   right: 30px;
+  cursor: pointer;
 }
 
 .side-menu ul {
   position: absolute;
   top: 20%;
-  left: 20%;
+  left: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,8 +161,8 @@ header .content .menu-btn span {
 }
 
 .side-menu ul a::before {
-  counter-increment: serial;
   content: "0" counter(serial);
+  counter-increment: serial 0;
   position: absolute;
   left: -30px;
   font-family: barlow condensed;
