@@ -1,140 +1,63 @@
-/* start slider*/
-.slider{
-    padding-top: $padding-top - 50px;
-    padding-bottom: $padding-bottom;
-    .content{
+body{
+    background-image: url(../../../imgs/home/background-home-mobile.jpg);
+    .landing{
+        margin-top: 48px;
         text-align: center;
-    }
-    blockquote{
-        font: {
-            weight:bold;
-            family: tahoma, arial;
-            size:20px;
-            style:italic;
-        }
-        margin: 30px auto;
-        width: 80%;
-        line-height: 1.8;
-        text-align: center;
-    }
-    img{
-        max-width: 90%;
-    }
-    ul.bullets{
-        padding-top:20px;
-        width: 80px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: center;
-        li{
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            cursor: pointer ;
-            &:first-child{
-                border-width: 3px;
-                background-color: #eee;
-            }
-        }
-    }
-
-}
-/*end slider*/
-/*start services*/
-.services{
-    padding-top: $padding-top;
-    padding-bottom: $padding-bottom;
-    .content{
-        padding-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(330px,1fr));
-        gap: 30px;
-        .card{
-            .heading{
-                display: flex;
-                justify-content: flex-start;
-                gap: 20px;
-                align-items: center;
-                flex-direction: row;
-                i{
-                    font-size: 22px;
-                }
-            }
-            p{
-                color: $grayColor;
-                margin-top: 0;
-            }
-            .readmore{
-                color: $redColor;
-                a{
-                    text-decoration: none;
-                    text-transform: capitalize;
-                    color: $redColor;
-                }
-                i{
-                    font-size: 14px;
-                }
-                
-            }
-        }
-    }
-}
-/*end services*/
-/*start ourplayers*/
-.our-players{
-    padding-top:$padding-top;
-    padding-bottom:$padding-bottom;
-    .content{
-        padding-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-        gap: 10px;
-        .card{
-            img{
-                max-width: 100%;
-            }
+        .info{
+            color: $main-text-color;
             h3{
-                font-weight: normal;
+                font:{
+                    size: 16px;
+                    family: Barlow Condensed;
+                    weight:400;
+                }
+                margin: 0;
+                letter-spacing: 2.7px;
+            }
+            h1{
+                font:{
+                    size: 80px;
+                    family: Bellefair;
+                    weight:400;
+                }
+                margin: 18px 0 0 0;
+                line-height: 100px;
+                text-transform: uppercase;
+                color: $main-headers-color;
             }
             p{
-                line-height: 1.6;
+                font:{
+                    size: 15px;
+                    family: Barlow;
+                    weight:400;
+                }
+                width: 100%;
+                line-height: 25px;
+                margin: 16px 0 0 0 ;
             }
-            .viewmore{
-                text-decoration: none;
-                color: $redColor;
-                a{
-                    color: $redColor;
-                    text-transform: capitalize;
+        }
+        .explore{
+            margin-top: 81px;
+            .circle{
+                width: 150px;
+                height: 150px;
+                margin: auto;
+                @include prefixer(border-radius, 50%, webkit o moz);
+                background-color: $main-headers-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    font:{
+                        size: 20px;
+                        family: Bellefair;
+                        weight:400;
+                    }
+                    letter-spacing: 1.25px;
+                    line-height: 22.92px;
+                    text-transform: uppercase;
                 }
             }
         }
     }
 }
-/*end ourplayers*/
-/*start lorem*/
-.lorem{
-    padding-top: $padding-top;
-    padding-bottom: $padding-bottom;
-    .content{
-        padding-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-        gap: 20px;
-        .image{
-            img{
-                max-width: 100%;
-            }
-            @include prefixer(border-radius, 15px, webkit moz o);
-            position: relative;
-            overflow: hidden;
-            &:hover::after{
-                content: "";
-                @include overlay (black,0.4)
-            }
-        }
-    }
-}
-/*end lorem*/

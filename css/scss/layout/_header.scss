@@ -1,0 +1,31 @@
+header{
+    margin: 24px 20px auto 20px; 
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        .logo{
+            width: 40px;
+            height: 40px;
+            img{
+                max-width: 100%;
+            }
+        }
+        .menu-btn{
+            width: 24px;
+            height: 21px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            span{
+                width: 100%;
+                height: 2px;
+                background-color: #D0D6F9;
+                
+            }
+        }
+    } 
+}
