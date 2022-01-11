@@ -1,9 +1,11 @@
 /*start homepage styling*/
 body{
     background-image: url(../../../imgs/home/background-home-mobile.jpg);
+    @include breakpoints (small){
+        background-image: url(../../../imgs/home/background-home-tablet.jpg);
+    }
     background-size: cover;
     position: relative;
-    // overflow: hidden;
     .landing{
         margin-top: 48px;
         text-align: center;
@@ -52,6 +54,7 @@ body{
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                cursor: pointer;
                 h2{
                     font:{
                         size: 20px;
@@ -73,8 +76,8 @@ body{
                     @include prefixer (transition, 0.5s, webkit o moz);
                 }
                 &:hover::after{
-                    width: 225px;
-                    height: 225px;
+                    width: 215px;
+                    height: 215px;
                 }
             }
         }
