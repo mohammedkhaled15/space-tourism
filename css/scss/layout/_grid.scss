@@ -1,0 +1,21 @@
+.container{
+    width: 1200px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include breakpoints (mobile){
+        width:310px;
+    }
+    @include breakpoints(small){
+        width:540px;
+    }
+    @include breakpoints(medium){
+        width:720px;
+    }
+    @include breakpoints(large){
+        width:960px;
+    }
+    @include breakpoints(xlarge){
+        width:1140px;
+    }
+}

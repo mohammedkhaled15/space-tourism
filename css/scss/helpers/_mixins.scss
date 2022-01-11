@@ -1,0 +1,60 @@
+// media quiries
+// use ==> @include breakpoints(small or medium or large or xlarge){your properties}
+@mixin breakpoints($screenSize) {
+  @if $screenSize == mobile{
+    @media (max-width:575px){
+      @content;
+    }
+  }
+  @if $screenSize == small {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $screenSize == medium {
+    @media (min-width: 768px){
+      @content;
+    }
+  } @else if $screenSize == large {
+    @media (min-width: 992px){
+      @content;
+    }
+  } @else if $screenSize == xlarge {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// Overlay
+// use ==> @include overlay(color,opacity)
+@mixin overlay($overlayColor, $opacity) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($overlayColor, $opacity);
+}
+
+// Prefixer
+// use ==> @include prefixer (property, value, prefix prefix ...)
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// keyframe prefixer
+// use ==> @include keyframePrefixer (nameof key frame){content}
+@mixin keyframePrefixer($animationName) {
+  @-webkit-keyframes #{$animationName}{
+      @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+      @content
+  }
+}
