@@ -4,7 +4,13 @@ const openMark = document.querySelector(".menu-btn")
 const mainMenu = document.querySelector(".side-menu")
 const closeMark = document.querySelector(".side-menu img")
 
-window.onload = function(){mainMenu.style.cssText = "display:none; visibility: hidden; opacity:0"}
+window.onload = function(){
+    if(window.innerWidth<= 576){
+
+        mainMenu.style.cssText = "display:none; visibility: hidden; opacity:0"
+    }
+    
+}
 
 openMark.addEventListener("click", function(){
     mainMenu.style.cssText = "display:block; visibility: visible; opacity:1"
@@ -12,6 +18,7 @@ openMark.addEventListener("click", function(){
 closeMark.addEventListener("click", function(){
     mainMenu.style.cssText = "display:none; visibility: hidden; opacity:0"
 })
+
 
 /*************************************************************************************************************/
 
