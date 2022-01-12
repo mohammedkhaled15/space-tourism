@@ -260,7 +260,7 @@ header .content .menu-btn span {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .side-menu ul a::before {
     display: block;
     left: 0;

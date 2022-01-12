@@ -114,7 +114,7 @@ header{
                 @include breakpoints (small){
                     display: none;
                 }
-                @include breakpoints (small){
+                @include breakpoints (large){
                     display: block;
                     left: 0;
                 }
