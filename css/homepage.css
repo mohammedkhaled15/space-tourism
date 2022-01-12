@@ -56,6 +56,12 @@
   color: #fff;
 }
 
+.visible {
+  opacity: 1 !important;
+  -webkit-transform: scale(1) translatex(-50%) !important;
+  transform: scale(1) translatex(-50%) !important;
+}
+
 /*start header styling*/
 header {
   padding-top: 24px;

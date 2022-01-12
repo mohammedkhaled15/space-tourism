@@ -56,6 +56,12 @@
   color: #fff;
 }
 
+.visible {
+  opacity: 1 !important;
+  -webkit-transform: scale(1) translatex(-50%) !important;
+  transform: scale(1) translatex(-50%) !important;
+}
+
 /*start header styling*/
 header {
   padding-top: 24px;
@@ -284,6 +290,7 @@ body .destination .content {
   text-align: center;
   margin-top: 34px;
   color: #D0D6F9;
+  position: relative;
 }
 
 body .destination .content h3 {
@@ -294,14 +301,23 @@ body .destination .content h3 {
   text-transform: uppercase;
 }
 
-body .destination .content img {
+body .destination .content .img-slider img {
   margin-top: 32px;
   width: 170px;
   height: 170px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+  transform: translatex(-50%);
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  opacity: 0;
 }
 
 body .destination .content ul.dest-menu {
-  margin-top: 32px;
+  margin-top: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,8 +345,22 @@ body .destination .content ul.dest-menu a {
   padding-bottom: 6px;
 }
 
-body .destination .content h1 {
+body .destination .content .info-slider {
+  position: relative;
+}
+
+body .destination .content .info-slider .card {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+body .destination .content .info-slider .card h1 {
   margin-top: 20px;
+  margin-bottom: 5px;
   text-transform: uppercase;
   font-family: bellefair;
   font-size: 56px;
@@ -339,7 +369,7 @@ body .destination .content h1 {
   color: #fff;
 }
 
-body .destination .content p {
+body .destination .content .info-slider .card p {
   margin-top: 1px;
   font-family: barlow;
   font-size: 15px;
@@ -347,7 +377,7 @@ body .destination .content p {
   position: relative;
 }
 
-body .destination .content p::after {
+body .destination .content .info-slider .card p::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -357,7 +387,7 @@ body .destination .content p::after {
   background-color: #D0D6F9;
 }
 
-body .destination .content > h4 {
+body .destination .content .info-slider .card > h4 {
   margin-top: 32px;
   text-transform: uppercase;
   font-family: barlow condensed;
@@ -367,7 +397,7 @@ body .destination .content > h4 {
   letter-spacing: 2.3px;
 }
 
-body .destination .content h2 {
+body .destination .content .info-slider .card h2 {
   text-transform: uppercase;
   margin-top: 12px;
   font-family: Bellefair;

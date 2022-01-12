@@ -1,6 +1,12 @@
 @import "./../helpers/variables";
+@import "./../helpers/mixins";
 
 .active{
     border-bottom: 3px solid #fff;
     color: $main-headers-color;
+}
+
+.visible{
+    opacity: 1 !important;
+    @include prefixer (transform, scale(1) translatex(-50%) !important, webkit moz o)
 }

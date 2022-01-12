@@ -7,6 +7,7 @@ body{
             text-align: center;
             margin-top: 34px;
             color: $main-text-color;
+            position: relative;
             h3{
                 font-family: barlow condensed;
                 font-size: 16px;
@@ -14,13 +15,22 @@ body{
                 letter-spacing: 2.7px;
                 text-transform: uppercase;
             }
-            img{
-                margin-top: 32px;
-                width: 170px;
-                height: 170px;
+            .img-slider{
+                img{
+                    margin-top: 32px;
+                    width: 170px;
+                    height: 170px;
+                    position: absolute;
+                    left: 50%;
+                    @include prefixer (transform, translatex(-50%), webkit moz o );
+                    @include prefixer (transform, scale(0.1), webkit moz o );
+                    @include prefixer (transition, 1.5s, webkit moz o );
+                    opacity: 0;
+                }
             }
+            
             ul.dest-menu{
-                margin-top: 32px;
+                margin-top: 260px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
@@ -40,47 +50,58 @@ body{
                     }
                 }
             }
-            h1{
-                margin-top: 20px;
-                text-transform: uppercase;
-                font-family: bellefair;
-                font-size: 56px;
-                line-height: 64.18px;
-                font-weight: 400;
-                color: $main-headers-color;
-            }
-            p{
-                margin-top: 1px;
-                font-family: barlow;
-                font-size: 15px;
-                line-height: 25px;
+            .info-slider{
                 position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
+                .card{
                     width: 100%;
-                    left: 0;
-                    bottom: -15px;
-                    height: 1px;
-                    background-color: $main-text-color;
+                    position: absolute;
+                    left: 50%;
+                    opacity: 0;
+                    @include prefixer (transition, 0.8s, webkit o moz);
+                    h1{
+                        margin-top: 20px;
+                        margin-bottom: 5px;
+                        text-transform: uppercase;
+                        font-family: bellefair;
+                        font-size: 56px;
+                        line-height: 64.18px;
+                        font-weight: 400;
+                        color: $main-headers-color;
+                    }
+                    p{
+                        margin-top: 1px;
+                        font-family: barlow;
+                        font-size: 15px;
+                        line-height: 25px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                            bottom: -15px;
+                            height: 1px;
+                            background-color: $main-text-color;
+                        }
+                    }
+                    > h4{
+                        margin-top: 32px;
+                        text-transform: uppercase;
+                        font-family: barlow condensed;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        letter-spacing: 2.3px;
+                    }
+                    h2{
+                        text-transform: uppercase;
+                        margin-top: 12px;
+                        font-family: Bellefair;
+                        font-size: 28px;
+                        font-weight: 400;
+                        line-height: 32px;
+                    }
                 }
-            }
-            > h4{
-                margin-top: 32px;
-                text-transform: uppercase;
-                font-family: barlow condensed;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 17px;
-                letter-spacing: 2.3px;
-            }
-            h2{
-                text-transform: uppercase;
-                margin-top: 12px;
-                font-family: Bellefair;
-                font-size: 28px;
-                font-weight: 400;
-                line-height: 32px;
             }
         }
     }
