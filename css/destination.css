@@ -274,172 +274,105 @@ header .content .menu-btn span {
 }
 
 /*start styling menu*/
-/*start homepage styling*/
 body {
-  background-image: url(../../../imgs/home/background-home-mobile.jpg);
+  background-image: url(../../../imgs/destination/background-destination-mobile.jpg);
   background-size: cover;
   position: relative;
 }
 
-@media (min-width: 576px) {
-  body {
-    background-image: url(../../../imgs/home/background-home-tablet.jpg);
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    background-image: url(../../../imgs/home/background-home-desktop.jpg);
-  }
-}
-
-body .landing {
-  margin-top: 48px;
+body .destination .content {
   text-align: center;
-}
-
-@media (min-width: 992px) {
-  body .landing .content {
-    margin-top: 150px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-body .landing .content .info {
+  margin-top: 34px;
   color: #D0D6F9;
 }
 
-@media (min-width: 992px) {
-  body .landing .content .info {
-    width: 47%;
-    text-align: left;
-  }
-}
-
-body .landing .content .info h3 {
+body .destination .content h3 {
+  font-family: barlow condensed;
   font-size: 16px;
-  font-family: Barlow Condensed;
-  font-weight: 400;
-  margin: 0;
+  line-height: 19.2px;
   letter-spacing: 2.7px;
-}
-
-@media (min-width: 992px) {
-  body .landing .content .info h3 {
-    font-size: 28px;
-    letter-spacing: 4.72px;
-  }
-}
-
-body .landing .content .info h1 {
-  font-size: 80px;
-  font-family: Bellefair;
-  font-weight: 400;
-  margin: 18px 0 0 0;
-  line-height: 100px;
   text-transform: uppercase;
-  color: #fff;
 }
 
-@media (min-width: 992px) {
-  body .landing .content .info h1 {
-    font-size: 150px;
-    margin-top: 24px;
-    line-height: 171.9px;
-  }
+body .destination .content img {
+  margin-top: 32px;
+  width: 170px;
+  height: 170px;
 }
 
-body .landing .content .info p {
-  font-size: 15px;
-  font-family: Barlow;
-  font-weight: 400;
-  width: 100%;
-  line-height: 25px;
-  margin: 16px 0 0 0;
-}
-
-@media (min-width: 992px) {
-  body .landing .content .info p {
-    font-size: 18px;
-    line-height: 32px;
-    margin-top: 24px;
-  }
-}
-
-body .landing .content .explore {
-  margin-top: 81px;
-}
-
-body .landing .content .explore .circle {
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  border-radius: 50%;
-  background-color: #fff;
+body .destination .content ul.dest-menu {
+  margin-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  cursor: pointer;
-}
-
-@media (min-width: 992px) {
-  body .landing .content .explore .circle {
-    width: 274px;
-    height: 274px;
-  }
-}
-
-body .landing .content .explore .circle h2 {
-  font-size: 20px;
-  font-family: Bellefair;
+  font-family: barlow condensed;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 2.36px;
   font-weight: 400;
-  letter-spacing: 1.25px;
-  line-height: 22.92px;
+}
+
+body .destination .content ul.dest-menu a {
+  text-decoration: none;
+  color: #D0D6F9;
   text-transform: uppercase;
+  padding-bottom: 6px;
 }
 
-body .landing .content .explore .circle:after {
+body .destination .content h1 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: bellefair;
+  font-size: 56px;
+  line-height: 64.18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+body .destination .content p {
+  margin-top: 1px;
+  font-family: barlow;
+  font-size: 15px;
+  line-height: 25px;
+  position: relative;
+}
+
+body .destination .content p::after {
   content: "";
-  border-radius: 50%;
   position: absolute;
-  z-index: -1;
   width: 100%;
-  height: 100%;
-  background-color: #25242f;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  left: 0;
+  bottom: -15px;
+  height: 1px;
+  background-color: #D0D6F9;
 }
 
-body .landing .content .explore .circle:hover::after {
-  width: 215px;
-  height: 215px;
+body .destination .content > h4 {
+  margin-top: 32px;
+  text-transform: uppercase;
+  font-family: barlow condensed;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 2.3px;
 }
 
-@media (min-width: 992px) {
-  body .landing .content .explore .circle:hover::after {
-    width: 350px;
-    height: 350px;
-  }
+body .destination .content h2 {
+  text-transform: uppercase;
+  margin-top: 12px;
+  font-family: Bellefair;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
 }
-
-/*end homepage styling*/
-/*# sourceMappingURL=homepage.css.map */
+/*# sourceMappingURL=destination.css.map */

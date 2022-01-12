@@ -1,4 +1,6 @@
+@import "./../helpers/variables";
 
 .active{
     border-bottom: 3px solid #fff;
+    color: $main-headers-color;
 }

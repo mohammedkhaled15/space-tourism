@@ -95,7 +95,7 @@ header{
         }
         a{
             text-decoration: none;
-            color: $main-headers-color;
+            color: $main-text-color;
             position: relative;
             counter-increment: serial;
             @include breakpoints (small){
