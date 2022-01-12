@@ -4,83 +4,122 @@ body{
     @include breakpoints (small){
         background-image: url(../../../imgs/home/background-home-tablet.jpg);
     }
+    @include breakpoints (large){
+        background-image: url(../../../imgs/home/background-home-desktop.jpg);
+    }
     background-size: cover;
     position: relative;
     .landing{
         margin-top: 48px;
         text-align: center;
-        .info{
-            color: $main-text-color;
-            h3{
-                font:{
-                    size: 16px;
-                    family: Barlow Condensed;
-                    weight:400;
-                }
-                margin: 0;
-                letter-spacing: 2.7px;
-            }
-            h1{
-                font:{
-                    size: 80px;
-                    family: Bellefair;
-                    weight:400;
-                }
-                margin: 18px 0 0 0;
-                line-height: 100px;
-                text-transform: uppercase;
-                color: $main-headers-color;
-            }
-            p{
-                font:{
-                    size: 15px;
-                    family: Barlow;
-                    weight:400;
-                }
-                width: 100%;
-                line-height: 25px;
-                margin: 16px 0 0 0 ;
-            }
-        }
-        .explore{
-            margin-top: 81px;
-            .circle{
-                width: 150px;
-                height: 150px;
-                margin: auto;
-                @include prefixer(border-radius, 50%, webkit o moz);
-                background-color: $main-headers-color;
+        .content{
+            @include breakpoints (large){
+                margin-top: 150px;
                 display: flex;
-                justify-content: center;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
-                position: relative;
-                cursor: pointer;
-                h2{
+            }
+            .info{
+                color: $main-text-color;
+                @include breakpoints (large){
+                    width: 47%;
+                    text-align: left;
+                }
+                h3{
                     font:{
-                        size: 20px;
+                        size: 16px;
+                        family: Barlow Condensed;
+                        weight:400;
+                    }
+                    @include breakpoints (large){
+                        font-size: 28px;
+                        letter-spacing: 4.72px;
+                    }
+                    margin: 0;
+                    letter-spacing: 2.7px;
+                }
+                h1{
+                    font:{
+                        size: 80px;
                         family: Bellefair;
                         weight:400;
                     }
-                    letter-spacing: 1.25px;
-                    line-height: 22.92px;
+                    @include breakpoints (large){
+                        font-size: 150px;
+                        margin-top: 24px;
+                        line-height: 171.9px;
+                    }
+                    margin: 18px 0 0 0;
+                    line-height: 100px;
                     text-transform: uppercase;
+                    color: $main-headers-color;
                 }
-                &:after{
-                    content: "";
-                    @include prefixer (border-radius, 50%, webkit o moz);
-                    position: absolute;
-                    z-index: -1;
+                p{
+                    font:{
+                        size: 15px;
+                        family: Barlow;
+                        weight:400;
+                    }
+                    @include breakpoints (large){
+                        font-size: 18px;
+                        line-height: 32px;
+                        margin-top: 24px;
+                    }
                     width: 100%;
-                    height: 100%;
-                    background-color: $hover-main-btn-color;
-                    @include prefixer (transition, 0.5s, webkit o moz);
+                    line-height: 25px;
+                    margin: 16px 0 0 0 ;
                 }
-                &:hover::after{
-                    width: 215px;
-                    height: 215px;
+            }
+            .explore{
+                margin-top: 81px;
+                .circle{
+                    width: 150px;
+                    height: 150px;
+                    margin: auto;
+                    @include prefixer(border-radius, 50%, webkit o moz);
+                    background-color: $main-headers-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    cursor: pointer;
+                    @include breakpoints (large){
+                        width: 274px;
+                        height: 274px;
+                    }
+                    h2{
+                        font:{
+                            size: 20px;
+                            family: Bellefair;
+                            weight:400;
+                        }
+                        letter-spacing: 1.25px;
+                        line-height: 22.92px;
+                        text-transform: uppercase;
+                    }
+                    &:after{
+                        content: "";
+                        @include prefixer (border-radius, 50%, webkit o moz);
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $hover-main-btn-color;
+                        @include prefixer (transition, 0.5s, webkit o moz);
+                    }
+                    &:hover::after{
+                        width: 215px;
+                        height: 215px;
+                        @include breakpoints (large){
+                            width: 350px;
+                            height: 350px;
+                        }
+                    }
                 }
             }
         }
+
     }
 }
 /*end homepage styling*/

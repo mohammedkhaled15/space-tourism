@@ -58,6 +58,10 @@ header{
         height: 85px;
         background-color: $main-background-color;
     }
+    @include breakpoints (large){
+        background-color: rgba(255, 255, 255, 0.04);
+        @include prefixer (backdrop-filter, blur(18px), webkit o moz);
+    }
     img{
         position: absolute;
         top: 20px;
@@ -75,11 +79,19 @@ header{
         flex-direction: column;
         justify-content: space-between;
         height: 200px;
+        counter-reset: serial -1;
         @include breakpoints (small){
             flex-direction: row;
             height: auto;
             position: unset;
             padding: 0 20px;
+        }
+        @include breakpoints (small){
+            flex-direction: row;
+            height: auto;
+            position: unset;
+            padding: 0 20px;
+            justify-content: space-evenly;
         }
         a{
             text-decoration: none;
@@ -87,7 +99,11 @@ header{
             position: relative;
             counter-increment: serial;
             @include breakpoints (small){
-                padding: 15px 10px 30px;
+                padding: 15px 10px 33px;
+            }
+            @include breakpoints (large){
+                padding-right:0;
+                padding-left: 20px;
             }
             &::before{
                 content:counter(serial, decimal-leading-zero);
@@ -98,6 +114,13 @@ header{
                 @include breakpoints (small){
                     display: none;
                 }
+                @include breakpoints (small){
+                    display: block;
+                    left: 0;
+                }
+            }
+            &:hover:not(.active){
+                border-bottom: 3px solid #84858a;
             }
             li{
                 text-transform: uppercase;
