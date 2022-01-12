@@ -14,6 +14,9 @@ body{
                 line-height: 19.2px;
                 letter-spacing: 2.7px;
                 text-transform: uppercase;
+                span{
+                    color: $main-headers-color
+                }
             }
             .img-slider{
                 img{
@@ -52,6 +55,8 @@ body{
             }
             .info-slider{
                 position: relative;
+                height: 450px;
+                overflow: hidden;
                 .card{
                     width: 100%;
                     position: absolute;
@@ -84,22 +89,24 @@ body{
                             background-color: $main-text-color;
                         }
                     }
-                    > h4{
-                        margin-top: 32px;
-                        text-transform: uppercase;
-                        font-family: barlow condensed;
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 17px;
-                        letter-spacing: 2.3px;
-                    }
-                    h2{
-                        text-transform: uppercase;
-                        margin-top: 12px;
-                        font-family: Bellefair;
-                        font-size: 28px;
-                        font-weight: 400;
-                        line-height: 32px;
+                    .calculations{
+                        h4{
+                            margin-top: 32px;
+                            text-transform: uppercase;
+                            font-family: barlow condensed;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 17px;
+                            letter-spacing: 2.3px;
+                        }
+                        h2{
+                            text-transform: uppercase;
+                            margin-top: 12px;
+                            font-family: Bellefair;
+                            font-size: 28px;
+                            font-weight: 400;
+                            line-height: 32px;
+                        }
                     }
                 }
             }

@@ -301,6 +301,10 @@ body .destination .content h3 {
   text-transform: uppercase;
 }
 
+body .destination .content h3 span {
+  color: #fff;
+}
+
 body .destination .content .img-slider img {
   margin-top: 32px;
   width: 170px;
@@ -347,6 +351,8 @@ body .destination .content ul.dest-menu a {
 
 body .destination .content .info-slider {
   position: relative;
+  height: 450px;
+  overflow: hidden;
 }
 
 body .destination .content .info-slider .card {
@@ -387,7 +393,7 @@ body .destination .content .info-slider .card p::after {
   background-color: #D0D6F9;
 }
 
-body .destination .content .info-slider .card > h4 {
+body .destination .content .info-slider .card .calculations h4 {
   margin-top: 32px;
   text-transform: uppercase;
   font-family: barlow condensed;
@@ -397,7 +403,7 @@ body .destination .content .info-slider .card > h4 {
   letter-spacing: 2.3px;
 }
 
-body .destination .content .info-slider .card h2 {
+body .destination .content .info-slider .card .calculations h2 {
   text-transform: uppercase;
   margin-top: 12px;
   font-family: Bellefair;
