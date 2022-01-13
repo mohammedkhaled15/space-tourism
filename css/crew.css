@@ -364,6 +364,12 @@ body {
   position: relative;
 }
 
+@media (min-width: 576px) {
+  body {
+    background-image: url(../../../imgs/crew/background-crew-tablet.jpg);
+  }
+}
+
 body .crew h3 {
   margin-top: 40px;
 }
@@ -372,10 +378,45 @@ body .crew .content {
   text-align: center;
   margin-top: 50px;
   color: #D0D6F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 576px) {
+  body .crew .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 576px) {
+  body .crew .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: ()[auto-fill];
+        grid-template-columns: repeat(auto-fill());
+  }
 }
 
 body .crew .content .img-slider img {
   top: 20%;
+}
+
+@media (min-width: 576px) {
+  body .crew .content .img-slider img {
+    top: 100%;
+    max-width: 100%;
+  }
 }
 
 body .crew .content .slider-btns {
@@ -398,7 +439,9 @@ body .crew .content .slider-btns {
 
 @media (min-width: 576px) {
   body .crew .content .slider-btns {
-    margin-top: 390px;
+    margin-top: 20px;
+    width: 30%;
+    margin: auto;
   }
 }
 
@@ -428,6 +471,12 @@ body .crew .content .slider-btns::before {
   top: -30px;
 }
 
+@media (min-width: 576px) {
+  body .crew .content .slider-btns::before {
+    display: none;
+  }
+}
+
 body .crew .content .info-slider {
   position: relative;
   height: 250px;
@@ -436,7 +485,7 @@ body .crew .content .info-slider {
 
 @media (min-width: 576px) {
   body .crew .content .info-slider {
-    height: 390px;
+    height: 200px;
   }
 }
 

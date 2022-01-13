@@ -1,5 +1,8 @@
 body{
     background-image: url(../../../imgs/crew/background-crew-mobile.jpg);
+    @include breakpoints (small){
+        background-image: url(../../../imgs/crew/background-crew-tablet.jpg);
+    }
     background-size: cover;
     position: relative;
     .crew{
@@ -10,8 +13,22 @@ body{
             text-align: center;
             margin-top: 50px;
             color: $main-text-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include breakpoints (small){
+                flex-direction: column-reverse;
+            }
+            @include breakpoints (small){
+                display: grid;
+                grid-template-columns: repeat(auto-fill,mimmax(800px,1fr);
+            }
             .img-slider img{
                 top: 20%;
+                @include breakpoints (small){
+                    top: 100%;
+                    max-width: 100%;
+                }
             }
             .slider-btns{
                 margin-top: 260px;
@@ -21,7 +38,9 @@ body{
                 align-items: center;
                 position: relative;
                 @include breakpoints(small) {
-                margin-top: 390px;
+                margin-top: 20px;
+                width: 30%;
+                margin: auto;
                 }
                 @include breakpoints(large) {
                 margin-top: 100px;
@@ -43,13 +62,16 @@ body{
                     height: 1px;
                     background-color: #484951;
                     top: -30px;
+                    @include breakpoints (small){
+                        display: none;
+                    }
                 }
             }
             .info-slider {
                 position: relative;
                 height: 250px;
                 @include breakpoints(small) {
-                    height: 390px;
+                    height: 200px;
                 }
                 @include breakpoints(large) {
                     height: 480px;
