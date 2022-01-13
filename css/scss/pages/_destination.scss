@@ -1,28 +1,64 @@
 body{
     background-image: url(../../../imgs/destination/background-destination-mobile.jpg);
+    @include breakpoints (small){
+        background-image: url(../../../imgs/destination/background-destination-tablet.jpg);
+    }
+    @include breakpoints (large){
+        background-image: url(../../../imgs/destination/background-destination-desktop.jpg);
+    }
     background-size: cover;
     position: relative;
     .destination{
         .content{
             text-align: center;
-            margin-top: 34px;
+            margin-top: 50px;
             color: $main-text-color;
             position: relative;
+            @include breakpoints (large){
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 700px;
+            }
             h3{
                 font-family: barlow condensed;
                 font-size: 16px;
                 line-height: 19.2px;
                 letter-spacing: 2.7px;
                 text-transform: uppercase;
+                @include breakpoints (small){
+                    text-align: left;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 3.38px;
+                }
+                @include breakpoints (large){
+                    font-size: 28px;
+                    line-height: 33.6px;
+                    letter-spacing: 4.72px;
+                }
                 span{
                     color: $main-headers-color
                 }
             }
             .img-slider{
+                @include breakpoints (large){
+                    height: 500px;
+                    position: relative;
+                }
                 img{
                     margin-top: 32px;
                     width: 170px;
                     height: 170px;
+                    @include breakpoints (small){
+                        width: 300px;
+                        height: 300px;
+                    }
+                    @include breakpoints (large){
+                        width: 475px;
+                        height: 475px;
+                        left: 33%;
+                    }
                     position: absolute;
                     left: 50%;
                     @include prefixer (transform, translatex(-50%), webkit moz o );
@@ -43,19 +79,32 @@ body{
                 line-height: 16.8px;
                 letter-spacing: 2.36px;
                 font-weight: 400;
+                @include breakpoints (small){
+                    margin-top: 390px;
+                    font-size: 16px;
+                    line-height: 19.2px;
+                    letter-spacing: 2.7px;
+                }
+                @include breakpoints (large){
+                    margin-top: 100px;
+                    font-size: 16px;
+                    line-height: 19.2px;
+                    letter-spacing: 2.7px;
+                }
                 a{
                     text-decoration: none;
                     color: $main-text-color;
                     text-transform: uppercase;
                     padding-bottom: 6px;
-                    li{
-                        
-                    }
+                    cursor: pointer;
                 }
             }
             .info-slider{
                 position: relative;
                 height: 450px;
+                @include breakpoints (small){
+                    height: 390px;
+                }
                 overflow: hidden;
                 .card{
                     width: 100%;
@@ -72,6 +121,14 @@ body{
                         line-height: 64.18px;
                         font-weight: 400;
                         color: $main-headers-color;
+                        @include breakpoints (small){
+                            font-size: 80px;
+                            line-height: 91.5px;
+                        }
+                        @include breakpoints (large){
+                            font-size: 100px;
+                            line-height: 114.6px;
+                        }
                     }
                     p{
                         margin-top: 1px;
@@ -79,17 +136,35 @@ body{
                         font-size: 15px;
                         line-height: 25px;
                         position: relative;
+                        @include breakpoints (small){
+                            font-size: 16px;
+                            line-height: 28px;
+                        }
+                        @include breakpoints (large){
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
                         &::after{
                             content: "";
                             position: absolute;
                             width: 100%;
                             left: 0;
                             bottom: -15px;
+                            @include breakpoints (small){
+                                bottom: -45px;
+                            }
                             height: 1px;
                             background-color: $main-text-color;
                         }
                     }
                     .calculations{
+                        @include breakpoints (small){
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            padding-top: 30px;
+                        }
                         h4{
                             margin-top: 32px;
                             text-transform: uppercase;
@@ -102,6 +177,9 @@ body{
                         h2{
                             text-transform: uppercase;
                             margin-top: 12px;
+                            @include breakpoints (small){
+                                margin-top: 30px;
+                            }
                             font-family: Bellefair;
                             font-size: 28px;
                             font-weight: 400;

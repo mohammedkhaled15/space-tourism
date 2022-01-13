@@ -3,6 +3,10 @@
   -o-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 * ul, * ol {
@@ -405,6 +409,10 @@ body .landing .content .explore .circle {
           align-items: center;
   position: relative;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (min-width: 992px) {

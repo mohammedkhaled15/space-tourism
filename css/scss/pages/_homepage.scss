@@ -84,6 +84,7 @@ body{
                     align-items: center;
                     position: relative;
                     cursor: pointer;
+                    user-select: none;
                     @include breakpoints (large){
                         width: 274px;
                         height: 274px;
@@ -119,7 +120,6 @@ body{
                 }
             }
         }
-
     }
 }
 /*end homepage styling*/

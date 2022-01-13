@@ -11,7 +11,7 @@ window.onload = function(){
     }
     
 }
-
+// Changing the displauy and the vis
 openMark.addEventListener("click", function(){
     mainMenu.style.cssText = "display:block; visibility: visible; opacity:1"
 })
@@ -30,7 +30,8 @@ linkItems.forEach((item)=>{
     item.addEventListener("click",function(){
         linkItems.forEach((el)=>el.classList.remove("active"))
         item.classList.add("active")
-
+        
+        // If we are using side menu we have to close it after preesing on any section
         if(window.innerWidth <= 575){
             mainMenu.style.cssText = "display:none; visibility: hidden; opacity:0"
         }
