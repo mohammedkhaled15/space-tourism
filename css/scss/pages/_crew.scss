@@ -3,6 +3,9 @@ body{
     @include breakpoints (small){
         background-image: url(../../../imgs/crew/background-crew-tablet.jpg);
     }
+    @include breakpoints (large){
+        background-image: url(../../../imgs/crew/background-crew-desktop.jpg);
+    }
     background-size: cover;
     position: relative;
     .crew{
@@ -19,17 +22,31 @@ body{
             @include breakpoints (small){
                 flex-direction: column-reverse;
             }
-            @include breakpoints (small){
-                display: grid;
-                grid-template-columns: repeat(auto-fill,mimmax(800px,1fr);
+            @include breakpoints (large){
+                height: 330px;
+                flex-wrap: wrap-reverse;
+                justify-content: flex-end;
+                align-items: unset;
             }
-            .img-slider img{
-                top: 20%;
-                @include breakpoints (small){
-                    top: 100%;
-                    max-width: 100%;
+            .img-slider{ 
+                @include breakpoints (large){
+                    height: 400px;
+                    width: 50%;
                 }
-            }
+                img{
+                    top: 20%;
+                    @include breakpoints (small){
+                        top: 100%;
+                        max-width: 100%;
+                    }
+                    @include breakpoints (large){
+                        top: -40%;
+                        width: 380px;
+                        height: 380px;
+                        left: 60%;
+                    }
+                }
+            }    
             .slider-btns{
                 margin-top: 260px;
                 display: flex;
@@ -43,7 +60,8 @@ body{
                 margin: auto;
                 }
                 @include breakpoints(large) {
-                margin-top: 100px;
+                margin: 10px auto;
+                width: 20%;
                 }
                 a {
                     width: 10px;
@@ -74,7 +92,9 @@ body{
                     height: 200px;
                 }
                 @include breakpoints(large) {
-                    height: 480px;
+                    height: 240px;
+                    width: 50%;
+                    align-self:center;
                 }
                 overflow: hidden;
                 .card {

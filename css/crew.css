@@ -370,6 +370,12 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  body {
+    background-image: url(../../../imgs/crew/background-crew-desktop.jpg);
+  }
+}
+
 body .crew h3 {
   margin-top: 40px;
 }
@@ -399,12 +405,24 @@ body .crew .content {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   body .crew .content {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: ()[auto-fill];
-        grid-template-columns: repeat(auto-fill());
+    height: 330px;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+}
+
+@media (min-width: 992px) {
+  body .crew .content .img-slider {
+    height: 400px;
+    width: 50%;
   }
 }
 
@@ -416,6 +434,15 @@ body .crew .content .img-slider img {
   body .crew .content .img-slider img {
     top: 100%;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  body .crew .content .img-slider img {
+    top: -40%;
+    width: 380px;
+    height: 380px;
+    left: 60%;
   }
 }
 
@@ -447,7 +474,8 @@ body .crew .content .slider-btns {
 
 @media (min-width: 992px) {
   body .crew .content .slider-btns {
-    margin-top: 100px;
+    margin: 10px auto;
+    width: 20%;
   }
 }
 
@@ -491,7 +519,11 @@ body .crew .content .info-slider {
 
 @media (min-width: 992px) {
   body .crew .content .info-slider {
-    height: 480px;
+    height: 240px;
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
