@@ -1,0 +1,103 @@
+body{
+    background-image: url(../../../imgs/crew/background-crew-mobile.jpg);
+    background-size: cover;
+    position: relative;
+    .crew{
+        h3{
+            margin-top: 40px;
+        }
+        .content{
+            text-align: center;
+            margin-top: 50px;
+            color: $main-text-color;
+            .img-slider img{
+                top: 20%;
+            }
+            .slider-btns{
+                margin-top: 260px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+                @include breakpoints(small) {
+                margin-top: 390px;
+                }
+                @include breakpoints(large) {
+                margin-top: 100px;
+                }
+                a {
+                    width: 10px;
+                    height: 10px;
+                    @include prefixer (border-radius, 50%, webkit moz o);
+                    background-color:$main-headers-color;
+                    text-decoration: none;
+                    padding-bottom: 6px;
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 90%;
+                    height: 1px;
+                    background-color: #484951;
+                    top: -30px;
+                }
+            }
+            .info-slider {
+                position: relative;
+                height: 250px;
+                @include breakpoints(small) {
+                    height: 390px;
+                }
+                @include breakpoints(large) {
+                    height: 480px;
+                }
+                overflow: hidden;
+                .card {
+                    width: 100%;
+                    position: absolute;
+                    left: 50%;
+                    opacity: 0;
+                    @include prefixer(transition, 0.8s, webkit o moz);
+                    h3{
+                        margin-bottom: 0;
+                        margin-top: 10px;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        font-family: bellefair;
+                        line-height: 18.34px;
+                        font-weight: 400;
+                        color: $main-headers-color;
+                        opacity: 0.5;
+                    }
+                    h2{
+                        margin-top:8px ;
+                        text-transform: uppercase;
+                        font-family: Bellefair;
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 28px;
+                    }
+                    p {
+                        font-family: Barlow;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 25px;
+                        margin-top: 1px;
+                        position: relative;
+                        @include breakpoints(small) {
+                            font-size: 16px;
+                            line-height: 28px;
+                        }
+                        @include breakpoints(large) {
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

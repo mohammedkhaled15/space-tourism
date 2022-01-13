@@ -1,0 +1,24 @@
+.page-title{
+    text-align: center;
+    color: $main-headers-color;
+    font-family: barlow condensed;
+        font-size: 16px;
+        line-height: 19.2px;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+        @include breakpoints(small) {
+          text-align: left;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 3.38px;
+        }
+        @include breakpoints(large) {
+          font-size: 28px;
+          line-height: 33.6px;
+          letter-spacing: 4.72px;
+        }
+        span{
+          color: $main-headers-color;
+          opacity: 0.5;
+        }
+}

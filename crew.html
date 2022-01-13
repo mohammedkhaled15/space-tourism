@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking normalize style sheet -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- linking homepage style sheet -->
+    <link rel="stylesheet" href="css/crew.css">
+    <!-- link fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- linking font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+    <!-- title of the page  -->
+    <title>Space-Tourism Homepage</title>
+</head>
+<body>
+    <!-- start header -->
+    <header>
+        <div class="content">
+            <div class="logo">
+                <a href="./index.html"><img src="imgs/shared/logo.svg" alt="logo"></a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="side-menu">
+            <img src="imgs/shared/icon-close.svg" alt="close">
+            <ul>
+                <a href="index.html" class="active"><li>home</li></a>
+                <a href="destination.html"><li>destination</li></a>
+                <a href="crew.html"><li>crew</li></a>
+                <a href="technology.html"><li>technology</li></a>
+            </ul>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start crew page -->
+    <div class="crew">
+        <div class="container">
+            <h3 class="page-title"><span>02</span> meet your crew</h3>
+            <div class="content">
+                <div class="img-slider">
+                    <img src="imgs/crew/image-anousheh-ansari.png" alt="crew member" class="anousheh visible">
+                    <img src="imgs/crew/image-douglas-hurley.png" alt="crew member" class="douglas">
+                    <img src="imgs/crew/image-mark-shuttleworth.png" alt="crew member" class="mark">
+                    <img src="imgs/crew/image-victor-glover.png" alt="crew member" class="victor">
+                </div>
+                <ul class="slider-btns">
+                    <a class="active-bullet" data-class= "anousheh"><li></li></a>
+                    <a data-class= "douglas"><li></li></a>
+                    <a data-class= "mark"><li></li></a>
+                    <a data-class= "victor"><li></li></a>
+                </ul>
+                <div class="info-slider">
+                    <div class="card anousheh visible">
+                        <h3>Commander</h3>
+                        <h2>Douglas Hurley</h2>
+                        <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                    </div>    
+                    <div class="card douglas">
+                        <h3>Mission Specialist </h3>
+                        <h2>MARK SHUTTLEWORTH</h2>
+                        <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+                    </div>    
+                    <div class="card mark">
+                        <h3>PILOT</h3>
+                        <h2>Victor Glover</h2>
+                        <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. </p>
+                    </div>    
+                    <div class="card victor">
+                        <h3>Flight Engineer</h3>
+                        <h2>Anousheh Ansari</h2>
+                        <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. </p>
+                    </div>    
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end crew page -->
+</body>
+<script src="js/main.js"></script>
+</html>

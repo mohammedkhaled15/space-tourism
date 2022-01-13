@@ -40,16 +40,16 @@ linkItems.forEach((item)=>{
 
 /*****************************************************************************************************************/
 
-// image slider 
+// image slider for destination, vrew pages
 
-const imgs = document.querySelectorAll(".destination .img-slider img")
-const btns = document.querySelectorAll(".destination .dest-menu a")
-const infos = document.querySelectorAll(".destination .info-slider .card")
+const imgs = document.querySelectorAll(".img-slider img")
+const btns = document.querySelectorAll(".slider-btns a")
+const infos = document.querySelectorAll(".info-slider .card")
 
 btns.forEach((btn)=>{
     btn.addEventListener("click", function(){
-        btns.forEach((btn)=>btn.classList.remove("active")) //removing class active first from all links
-        btn.classList.add("active") // adding class active to the clicked link
+        btns.forEach((btn)=>btn.classList.remove("active","active-bullet")) //removing class active first from all links
+        btn.classList.add("active", "active-bullet") // adding class active to the clicked link
 
         // Manipulating with img slider
         imgs.forEach((img)=>{
@@ -75,3 +75,6 @@ btns.forEach((btn)=>{
         })
     })
 })
+
+/*************************************************************************************************************/
+

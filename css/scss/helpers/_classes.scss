@@ -10,3 +10,7 @@
     opacity: 1 !important;
     @include prefixer (transform, scale(1) translatex(-50%) !important, webkit moz o)
 }
+.active-bullet{
+    background-color: #fff !important;
+    opacity: 1 !important;
+}
