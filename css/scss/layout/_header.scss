@@ -99,7 +99,7 @@ header{
             position: relative;
             counter-increment: serial;
             @include breakpoints (small){
-                padding: 15px 10px 33px;
+                padding: 15px  0 33px 10px;
             }
             @include breakpoints (large){
                 padding-right:0;
@@ -109,8 +109,8 @@ header{
                 content:counter(serial, decimal-leading-zero);
                 position: absolute;
                 left: -30px;
-                font-family: barlow Condensed;
-                font-weight: 800;
+                font-family: barlow condensed;
+                font-weight: 700;
                 @include breakpoints (small){
                     display: none;
                 }

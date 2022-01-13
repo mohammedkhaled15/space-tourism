@@ -239,7 +239,7 @@ header .content .menu-btn span {
 
 @media (min-width: 576px) {
   .side-menu ul a {
-    padding: 15px 10px 33px;
+    padding: 15px  0 33px 10px;
   }
 }
 
@@ -254,8 +254,8 @@ header .content .menu-btn span {
   content: counter(serial, decimal-leading-zero);
   position: absolute;
   left: -30px;
-  font-family: barlow Condensed;
-  font-weight: 800;
+  font-family: barlow condensed;
+  font-weight: 700;
 }
 
 @media (min-width: 576px) {
@@ -320,7 +320,7 @@ body .destination .content {
             flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    height: 700px;
+    height: 660px;
   }
 }
 
@@ -447,6 +447,12 @@ body .destination .content .info-slider {
 @media (min-width: 576px) {
   body .destination .content .info-slider {
     height: 390px;
+  }
+}
+
+@media (min-width: 992px) {
+  body .destination .content .info-slider {
+    height: 480px;
   }
 }
 

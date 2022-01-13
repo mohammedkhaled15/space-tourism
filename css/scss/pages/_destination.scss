@@ -18,7 +18,7 @@ body{
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
-                height: 700px;
+                height: 660px;
             }
             h3{
                 font-family: barlow condensed;
@@ -104,6 +104,9 @@ body{
                 height: 450px;
                 @include breakpoints (small){
                     height: 390px;
+                }
+                @include breakpoints (large){
+                    height: 480px;
                 }
                 overflow: hidden;
                 .card{
