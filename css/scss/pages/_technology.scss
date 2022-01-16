@@ -1,0 +1,123 @@
+/*strat technology style*/
+body{
+    background-image: url(../../../imgs/technology/background-technology-mobile.jpg);
+    @include breakpoints (small){
+        background-image: url(../../../imgs/technology/background-technology-tablet.jpg);
+    }
+    @include breakpoints (large){
+        background-image: url(../../../imgs/technology/background-technology-desktop.jpg);
+    }
+    overflow: hidden;
+    .technology{
+        text-align: center;
+        .content{
+            position: relative;
+            .img-slider{
+                overflow: hidden;
+                img{
+                    width: 100vw;
+                }
+            }
+            .slider-btns{
+                display: inline-flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 152px;
+                position: absolute;
+                top: 216px;
+                left: 50%;
+                @include prefixer (transform, translatex(-50%) !important, webkit moz o);
+                a{
+                    width: 40px;
+                    height: 40px;
+                    @include prefixer (border-radius, 50%, webkit moz o);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba($main-headers-color, 0.4);
+                    cursor: pointer;
+                    &:hover:not(.active){
+                        border: 1px solid $main-headers-color;
+                    }
+                    li{
+                        font-family: Bellefair;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 1px;
+                        text-align: center;
+                    }
+                }
+            }
+            .info-slider{
+                position: relative;
+                height: 330px;
+                top: 270px;
+                @include breakpoints(small) {
+                height: 390px;
+                }
+                @include breakpoints(large) {
+                height: 480px;
+                }
+                overflow: hidden;
+                .card {
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                opacity: 0;
+                @include prefixer(transition, 0.8s, webkit o moz);
+                h3{
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
+                    color: $main-headers-color;
+                    font-family: Barlow Condensed;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 17px;
+                    letter-spacing: 2.362499952316284px;
+                    text-align: center;
+                    @include breakpoints(small) {
+                    font-size: 80px;
+                    line-height: 91.5px;
+                    }
+                    @include breakpoints(large) {
+                    font-size: 100px;
+                    line-height: 114.6px;
+                    }
+                }
+                h2{
+                    margin-top: 9px;
+                    font-family: Bellefair;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: center;
+                    color:$main-headers-color
+                }
+                p {
+                    font-family: Barlow;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    text-align: center;
+                    margin-top: 1px;
+                    position: relative;
+                    color: #D0D6F9;
+                    @include breakpoints(small) {
+                    font-size: 16px;
+                    line-height: 28px;
+                    }
+                    @include breakpoints(large) {
+                    font-size: 18px;
+                    line-height: 32px;
+                    }
+                }
+                }
+            }
+        }
+    }
+    
+}
+/*end technology style*/

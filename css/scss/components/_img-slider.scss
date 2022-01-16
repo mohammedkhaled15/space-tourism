@@ -18,7 +18,7 @@
       }
       position: absolute;
       left: 50%;
-      @include prefixer(transform, translatex(-50%), webkit moz o);
+      @include prefixer(transform, translatex(-50%) !important, webkit moz o);
       @include prefixer(transform, scale(0.1), webkit moz o);
       @include prefixer(transition, 1.5s, webkit moz o);
       opacity: 0;

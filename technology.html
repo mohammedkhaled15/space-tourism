@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking normalize style sheet -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- linking homepage style sheet -->
+    <link rel="stylesheet" href="css/technology.css">
+    <!-- link fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- linking font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+    <!-- title of the page  -->
+    <title>Space-Tourism Homepage</title>
+</head>
+<body>
+    <!-- start header -->
+    <header>
+        <div class="content">
+            <div class="logo">
+                <a href="./index.html"><img src="imgs/shared/logo.svg" alt="logo"></a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="side-menu">
+            <img src="imgs/shared/icon-close.svg" alt="close">
+            <ul>
+                <a href="index.html" ><li>home</li></a>
+                <a href="destination.html"><li>destination</li></a>
+                <a href="crew.html" ><li>crew</li></a>
+                <a href="technology.html" class="active"><li>technology</li></a>
+            </ul>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start technology page -->
+    <div class="technology">
+        <div class="container">
+            <h3 class="page-title"><span>03</span>SPACE LAUNCH 101</h3>
+            <div class="content">
+                <div class="img-slider">
+                    <img src="imgs/technology/image-launch-vehicle-landscape.jpg" alt="launch-vehicle" class= "launch visible">
+                    <img src="imgs/technology/image-space-capsule-landscape.jpg" alt="space-capsule" class="capsule">
+                    <img src="imgs/technology/image-spaceport-landscape.jpg" alt="spaceport" class="spaceport">
+                </div>
+                <ul class="slider-btns technology">
+                    <a class="active-bullet" data-class= "launch"><li>1</li></a>
+                    <a data-class= "capsule"><li>2</li></a>
+                    <a data-class= "spaceport"><li>3</li></a>
+                </ul>
+                <div class="info-slider">
+                    <div class="card launch visible">
+                        <h3>THE TERMINOLOGY…</h3>
+                        <h2>LAUNCH VEHICLE</h2>
+                        <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+                    </div>    
+                    <div class="card capsule">
+                        <h3>THE TERMINOLOGY…</h3>
+                        <h2>SPACEPORT</h2>
+                        <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.</p>
+                    </div>    
+                    <div class="card spaceport">
+                        <h3>THE TERMINOLOGY…</h3>
+                        <h2>SPACE CAPSULE</h2>
+                        <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.</p>
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end technology page -->
+</body>
+<script src="js/main.js"></script>
+</html>

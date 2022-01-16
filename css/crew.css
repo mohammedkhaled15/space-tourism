@@ -71,6 +71,10 @@
   opacity: 1 !important;
 }
 
+.active-ball li {
+  color: black;
+}
+
 .page-title {
   text-align: center;
   color: #fff;
@@ -101,6 +105,7 @@
 .page-title span {
   color: #fff;
   opacity: 0.5;
+  margin-right: 15px;
 }
 
 @media (min-width: 992px) {
@@ -116,8 +121,8 @@
   height: 170px;
   position: absolute;
   left: 50%;
-  -webkit-transform: translatex(-50%);
-  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%) !important;
+  transform: translatex(-50%) !important;
   -webkit-transform: scale(0.1);
   transform: scale(0.1);
   -webkit-transition: 1.5s;

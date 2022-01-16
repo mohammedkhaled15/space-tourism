@@ -14,7 +14,7 @@ body{
         text-align: center;
         .content{
             @include breakpoints (large){
-                margin-top: 150px;
+                margin-top: 80px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -27,11 +27,9 @@ body{
                     text-align: left;
                 }
                 h3{
-                    font:{
-                        size: 16px;
-                        family: Barlow Condensed;
-                        weight:400;
-                    }
+                    font-size: 16px;
+                    font-family: Barlow Condensed;
+                    font-weight:400;
                     @include breakpoints (large){
                         font-size: 28px;
                         letter-spacing: 4.72px;
@@ -40,11 +38,9 @@ body{
                     letter-spacing: 2.7px;
                 }
                 h1{
-                    font:{
-                        size: 80px;
-                        family: Bellefair;
-                        weight:400;
-                    }
+                    font-size: 80px;
+                    font-family: Bellefair;
+                    font-weight:400;
                     @include breakpoints (large){
                         font-size: 150px;
                         margin-top: 24px;
@@ -56,11 +52,9 @@ body{
                     color: $main-headers-color;
                 }
                 p{
-                    font:{
-                        size: 15px;
-                        family: Barlow;
-                        weight:400;
-                    }
+                    font-size: 15px;
+                    font-family: Barlow;
+                    font-weight:400;
                     @include breakpoints (large){
                         font-size: 18px;
                         line-height: 32px;
@@ -72,7 +66,7 @@ body{
                 }
             }
             .explore{
-                margin-top: 81px;
+                margin-top: 50px;
                 .circle{
                     width: 150px;
                     height: 150px;
@@ -90,11 +84,9 @@ body{
                         height: 274px;
                     }
                     h2{
-                        font:{
-                            size: 20px;
-                            family: Bellefair;
-                            weight:400;
-                        }
+                        font-size: 20px;
+                        font-family: Bellefair;
+                        font-weight:400;
                         letter-spacing: 1.25px;
                         line-height: 22.92px;
                         text-transform: uppercase;

@@ -55,6 +55,39 @@
   }
 }
 
+.page-title {
+  text-align: center;
+  color: #fff;
+  font-family: barlow condensed;
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .page-title {
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.38px;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-title {
+    font-size: 28px;
+    line-height: 33.6px;
+    letter-spacing: 4.72px;
+  }
+}
+
+.page-title span {
+  color: #fff;
+  opacity: 0.5;
+  margin-right: 15px;
+}
+
 .active {
   border-bottom: 3px solid #fff;
   color: #fff;
@@ -64,6 +97,15 @@
   opacity: 1 !important;
   -webkit-transform: scale(1) translatex(-50%) !important;
   transform: scale(1) translatex(-50%) !important;
+}
+
+.active-bullet {
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+
+.active-ball li {
+  color: black;
 }
 
 /*start header styling*/
@@ -310,7 +352,7 @@ body .landing {
 
 @media (min-width: 992px) {
   body .landing .content {
-    margin-top: 150px;
+    margin-top: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -389,7 +431,7 @@ body .landing .content .info p {
 }
 
 body .landing .content .explore {
-  margin-top: 81px;
+  margin-top: 50px;
 }
 
 body .landing .content .explore .circle {

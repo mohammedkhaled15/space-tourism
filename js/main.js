@@ -48,8 +48,20 @@ const infos = document.querySelectorAll(".info-slider .card")
 
 btns.forEach((btn)=>{
     btn.addEventListener("click", function(){
-        btns.forEach((btn)=>btn.classList.remove("active","active-bullet")) //removing class active first from all links
-        btn.classList.add("active", "active-bullet") // adding class active to the clicked link
+        
+        btns.forEach((btn)=>{
+            if(btn.parentElement.classList.contains("destination")){
+                btn.classList.remove("active")//removing class active first from all links
+                btn.classList.add("active") // adding class active to the clicked link
+            }else if(btn.parentElement.classList.contains("crew")){
+                btn.classList.remove("active-bullet")//removing class active first from all links
+                btn.classList.add("active-bullet") // adding class active to the clicked link
+            }else if(btn.parentElement.classList.contains("destination")){
+                btn.classList.remove("active-bullet")//removing class active first from all links
+                btn.classList.add("active-bullet") // adding class active to the clicked link
+            }
+        }) 
+        
 
         // Manipulating with img slider
         imgs.forEach((img)=>{
