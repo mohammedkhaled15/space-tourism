@@ -7,15 +7,41 @@ body{
     @include breakpoints (large){
         background-image: url(../../../imgs/technology/background-technology-desktop.jpg);
     }
-    overflow: hidden;
+    background-size: cover;
+    position: relative;
     .technology{
+        position: relative;
         text-align: center;
         .content{
-            position: relative;
+            // position: relative;
+            @include breakpoints (large){
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 40px;
+                margin-top: 100px;
+            }
             .img-slider{
                 overflow: hidden;
+                width: 40%;
+                @include breakpoints (large){
+                    position: absolute;
+                    right:0;
+                    width: 500px;
+                    top: 50px;
+                    height: 450px;
+                    margin-bottom: 50px;
+                }
                 img{
                     width: 100vw;
+                    @include breakpoints (large){
+                        width: 520px;
+                        height: 520px;
+                        position: absolute;
+                        left:unset;
+
+                    }
                 }
             }
             .slider-btns{
@@ -25,6 +51,20 @@ body{
                 width: 152px;
                 position: absolute;
                 top: 216px;
+                @include breakpoints (small){
+                    top: 400px;
+                }
+                @include breakpoints (large){
+                    position: static;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    justify-content: space-evenly;
+                    width: 10%;
+                    order: 1;
+                    left: unset;
+                    @include prefixer (transform, translatex(0%) !important, webkit moz o);    
+                }
                 left: 50%;
                 @include prefixer (transform, translatex(-50%) !important, webkit moz o);
                 a{
@@ -39,6 +79,10 @@ body{
                     &:hover:not(.active){
                         border: 1px solid $main-headers-color;
                     }
+                    @include breakpoints (large){
+                        width: 80px;
+                        height: 80px;
+                    }
                     li{
                         font-family: Bellefair;
                         font-size: 16px;
@@ -46,18 +90,26 @@ body{
                         line-height: 18px;
                         letter-spacing: 1px;
                         text-align: center;
+                        @include breakpoints (large){
+                            font-size: 32px;
+                            line-height: 37px;
+                            letter-spacing: 2px;
+                        }
                     }
                 }
             }
             .info-slider{
                 position: relative;
                 height: 330px;
+                width: 100%;
                 top: 270px;
                 @include breakpoints(small) {
-                height: 390px;
+                height: 280px;
+                top: 425px;
                 }
                 @include breakpoints(large) {
-                height: 480px;
+                    top: unset;
+                    width:50%
                 }
                 overflow: hidden;
                 .card {
@@ -66,6 +118,7 @@ body{
                 left: 50%;
                 opacity: 0;
                 @include prefixer(transition, 0.8s, webkit o moz);
+
                 h3{
                     margin-top: 20px;
                     margin-bottom: 5px;
@@ -76,15 +129,15 @@ body{
                     font-style: normal;
                     font-weight: 400;
                     line-height: 17px;
-                    letter-spacing: 2.362499952316284px;
+                    letter-spacing: 2.3px;
                     text-align: center;
                     @include breakpoints(small) {
-                    font-size: 80px;
-                    line-height: 91.5px;
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 2.7px;
                     }
                     @include breakpoints(large) {
-                    font-size: 100px;
-                    line-height: 114.6px;
+                        text-align: left;
                     }
                 }
                 h2{
@@ -94,7 +147,16 @@ body{
                     font-weight: 400;
                     line-height: 28px;
                     text-align: center;
-                    color:$main-headers-color
+                    color:$main-headers-color;
+                    @include breakpoints (small){
+                        font-size: 40px;
+                        line-height: 46px;
+                    }
+                    @include breakpoints (large){
+                        font-size: 56px;
+                        line-height: 64px;
+                        text-align: left;
+                    }
                 }
                 p {
                     font-family: Barlow;
@@ -110,8 +172,9 @@ body{
                     line-height: 28px;
                     }
                     @include breakpoints(large) {
-                    font-size: 18px;
-                    line-height: 32px;
+                        font-size: 18px;
+                        line-height: 32px;
+                        text-align: left;
                     }
                 }
                 }

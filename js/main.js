@@ -52,15 +52,19 @@ btns.forEach((btn)=>{
         btns.forEach((btn)=>{
             if(btn.parentElement.classList.contains("destination")){
                 btn.classList.remove("active")//removing class active first from all links
-                btn.classList.add("active") // adding class active to the clicked link
             }else if(btn.parentElement.classList.contains("crew")){
                 btn.classList.remove("active-bullet")//removing class active first from all links
-                btn.classList.add("active-bullet") // adding class active to the clicked link
-            }else if(btn.parentElement.classList.contains("destination")){
-                btn.classList.remove("active-bullet")//removing class active first from all links
-                btn.classList.add("active-bullet") // adding class active to the clicked link
+            }else if(btn.parentElement.classList.contains("technology")){
+                btn.classList.remove("active-ball")//removing class active first from all links
             }
-        }) 
+        })
+        if(btn.parentElement.classList.contains("destination")){
+            btn.classList.add("active") // adding class active to the clicked link
+        }else if(btn.parentElement.classList.contains("crew")){
+            btn.classList.add("active-bullet") // adding class active to the clicked link
+        }else if(btn.parentElement.classList.contains("technology")){
+            btn.classList.add("active-ball") // adding class active to the clicked link
+        }
         
 
         // Manipulating with img slider
@@ -90,3 +94,13 @@ btns.forEach((btn)=>{
 
 /*************************************************************************************************************/
 
+// changing the src of images of the technology page
+const imgsTechnology = document.querySelectorAll(".technology .img-slider img")
+
+window.addEventListener("load", function (){
+    if(window.innerWidth >= 992){
+        imgsTechnology[0].setAttribute("src","../imgs/technology/image-launch-vehicle-portrait.jpg")
+        imgsTechnology[1].setAttribute("src","../imgs/technology/image-space-capsule-portrait.jpg")
+        imgsTechnology[2].setAttribute("src","../imgs/technology/image-spaceport-portrait.jpg")
+    }
+})

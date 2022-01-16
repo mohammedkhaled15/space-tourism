@@ -93,19 +93,20 @@
   color: #fff;
 }
 
-.visible {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) translatex(-50%) !important;
-  transform: scale(1) translatex(-50%) !important;
-}
-
 .active-bullet {
   background-color: #fff !important;
   opacity: 1 !important;
 }
 
-.active-ball li {
+.active-ball {
   color: black;
+  background-color: #fff !important;
+}
+
+.visible {
+  opacity: 1 !important;
+  -webkit-transform: scale(1) translatex(-50%) !important;
+  transform: scale(1) translatex(-50%) !important;
 }
 
 /*start header styling*/
@@ -181,7 +182,7 @@ header .content .menu-btn span {
 /*start styling menu*/
 .side-menu {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(18px);
   -o-backdrop-filter: blur(18px);
   -moz-backdrop-filter: blur(18px);

@@ -72,6 +72,9 @@ body{
                     padding-bottom: 6px;
                     cursor: pointer;
                     opacity: 0.5;
+                    &:hover:not(.active-bullet){
+                        background-color: rgba($main-text-color, 0.6);
+                    }
                 }
                 &::before{
                     content: "";
