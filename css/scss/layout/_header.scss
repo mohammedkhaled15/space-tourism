@@ -117,7 +117,7 @@ header{
                 }
                 @include breakpoints (large){
                     display: block;
-                    left: 0;
+                    left: -10px;
                 }
             }
             &:hover:not(.active){
