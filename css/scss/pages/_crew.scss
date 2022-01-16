@@ -27,6 +27,7 @@ body{
                 flex-wrap: wrap-reverse;
                 justify-content: flex-end;
                 align-items: unset;
+                margin-top: 150px;
             }
             .img-slider{ 
                 @include breakpoints (large){

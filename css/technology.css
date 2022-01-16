@@ -181,7 +181,8 @@ header .content .logo {
 }
 
 header .content .logo a img {
-  max-width: 100%;
+  width: 40px;
+  height: 40px;
 }
 
 header .content .menu-btn {
@@ -315,6 +316,11 @@ header .content .menu-btn span {
   color: #D0D6F9;
   position: relative;
   counter-increment: serial;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  font-family: Barlow Condensed;
+  font-size: 16px;
 }
 
 @media (min-width: 576px) {
@@ -353,14 +359,6 @@ header .content .menu-btn span {
 
 .side-menu ul a:hover:not(.active) {
   border-bottom: 3px solid #84858a;
-}
-
-.side-menu ul a li {
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2.4px;
-  font-family: Barlow Condensed;
-  font-size: 16px;
 }
 
 /*start styling menu*/
@@ -419,7 +417,7 @@ body .technology .content .img-slider {
     right: 0;
     width: 500px;
     top: 50px;
-    height: 450px;
+    height: 460px;
     margin-bottom: 50px;
   }
 }
@@ -431,7 +429,7 @@ body .technology .content .img-slider img {
 @media (min-width: 992px) {
   body .technology .content .img-slider img {
     width: 520px;
-    height: 520px;
+    height: 100%;
     position: absolute;
     left: unset;
   }
@@ -486,6 +484,12 @@ body .technology .content .slider-btns {
 }
 
 body .technology .content .slider-btns a {
+  font-family: Bellefair;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -510,20 +514,6 @@ body .technology .content .slider-btns a:hover:not(.active) {
   body .technology .content .slider-btns a {
     width: 80px;
     height: 80px;
-  }
-}
-
-body .technology .content .slider-btns a li {
-  font-family: Bellefair;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-@media (min-width: 992px) {
-  body .technology .content .slider-btns a li {
     font-size: 32px;
     line-height: 37px;
     letter-spacing: 2px;

@@ -181,7 +181,8 @@ header .content .logo {
 }
 
 header .content .logo a img {
-  max-width: 100%;
+  width: 40px;
+  height: 40px;
 }
 
 header .content .menu-btn {
@@ -315,6 +316,11 @@ header .content .menu-btn span {
   color: #D0D6F9;
   position: relative;
   counter-increment: serial;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  font-family: Barlow Condensed;
+  font-size: 16px;
 }
 
 @media (min-width: 576px) {
@@ -353,14 +359,6 @@ header .content .menu-btn span {
 
 .side-menu ul a:hover:not(.active) {
   border-bottom: 3px solid #84858a;
-}
-
-.side-menu ul a li {
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2.4px;
-  font-family: Barlow Condensed;
-  font-size: 16px;
 }
 
 /*start styling menu*/

@@ -13,7 +13,6 @@ body{
         position: relative;
         text-align: center;
         .content{
-            // position: relative;
             @include breakpoints (large){
                 display: flex;
                 flex-direction: row-reverse;
@@ -30,14 +29,14 @@ body{
                     right:0;
                     width: 500px;
                     top: 50px;
-                    height: 450px;
+                    height: 460px;
                     margin-bottom: 50px;
                 }
                 img{
                     width: 100vw;
                     @include breakpoints (large){
                         width: 520px;
-                        height: 520px;
+                        height: 100%;
                         position: absolute;
                         left:unset;
 
@@ -68,6 +67,12 @@ body{
                 left: 50%;
                 @include prefixer (transform, translatex(-50%) !important, webkit moz o);
                 a{
+                    font-family: Bellefair;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 1px;
+                    text-align: center;
                     width: 40px;
                     height: 40px;
                     @include prefixer (border-radius, 50%, webkit moz o);
@@ -82,20 +87,10 @@ body{
                     @include breakpoints (large){
                         width: 80px;
                         height: 80px;
-                    }
-                    li{
-                        font-family: Bellefair;
-                        font-size: 16px;
-                        font-weight: 400;
-                        line-height: 18px;
-                        letter-spacing: 1px;
-                        text-align: center;
-                        @include breakpoints (large){
-                            font-size: 32px;
-                            line-height: 37px;
-                            letter-spacing: 2px;
-                        }
-                    }
+                        font-size: 32px;
+                        line-height: 37px;
+                        letter-spacing: 2px;
+                    }   
                 }
             }
             .info-slider{
